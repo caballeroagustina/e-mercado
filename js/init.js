@@ -40,8 +40,45 @@ var getJSONData = function(url){
     });
 }
 
-//Función que se ejecuta una vez que se haya lanzado el evento de
+
+//Función que se ejecuta una vez que se haya lanzado el evento de,
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
-});
+document.addEventListener("DOMContentLoaded", 
+function recuperarDatos() {
+  if (localStorage.getItem("mis_datos")) {
+
+    let mis_datos_json = localStorage.getItem("mis_datos");
+    
+    let mis_datos = JSON.parse(mis_datos_json);
+
+    document.getElementById("usuario").innerHTML = 
+    "Usuario : " + mis_datos.usuario + "<br>" ;
+ }});
+
+  function guardarDatos() { 
+     
+    let mis_datos = { 
+      dato : document.getElementById("inputEmail").value
+        
+       
+       };
+      
+   
+       let mis_datos_json = JSON.stringify(mis_datos); 
+    
+   
+       localStorage.setItem( "mis_datos", mis_datos_json);
+    } 
+    document.addEventListener("DOMContentLoaded", 
+    function (e) {
+      let userLogged = localStorage.getItem(`User-Logged`);
+      let infoUser = document.getElementById("info-user")
+      let user = document.getElementById("usuario");
+
+      if (userLogged){
+        userLogged = JSON.parse(userLogged);
+        Usuario.innerText = Usuario.innerText + "Usuario:" + userLogged.usuario;
+       
+      }
+    });
