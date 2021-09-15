@@ -7,6 +7,8 @@ var maxCosto;
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 var categoriesArray = [];
+function verMas (name) { localStorage.setItem(`auto ` , JSON.stringify({autoname:name}));
+     window.location = "product-info.html"; }
 
 function showAutos(array){
 
@@ -36,10 +38,13 @@ function showAutos(array){
             </div>
         </div>
         `
-
-        document.getElementById("listado").innerHTML = contenido;
-    }
+     contenido += `<button style="float: right;" onclick="verMas(name)"> Ver más</button> <br><br>`
+     
+     document.getElementById("listado").innerHTML = contenido;
 }}
+       
+    }
+   
 
 
 //Función que se ejecuta una vez que se haya lanzado el evento de

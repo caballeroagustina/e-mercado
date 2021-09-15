@@ -2,6 +2,9 @@ const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.j
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
 const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
 const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json";
+const PRODUCTS1_URL = "https://raw.githubusercontent.com/caballeroagustina/e-mercado/main/FiatWay.json";
+const PRODUCTS2_URL = "https://raw.githubusercontent.com/caballeroagustina/e-mercado/main/SuzukiCelerio.json";
+const PRODUCTS3_URL = "https://raw.githubusercontent.com/caballeroagustina/e-mercado/main/Peugeot208.json";
 const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
@@ -52,7 +55,7 @@ function recuperarDatos() {
     
     let mis_datos = JSON.parse(mis_datos_json);
 
-    document.getElementById("usuario").innerHTML = 
+    document.getElementById("dato").innerHTML = 
     "Usuario : " + mis_datos.usuario + "<br>" ;
  }});
 
