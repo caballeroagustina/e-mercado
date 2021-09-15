@@ -1,0 +1,12 @@
+{"name": "Fiat Way",
+"description": "Fiat Uno Way cuenta con Sistema de frenos anti bloqueo (ABS), además doble bolsa de aire delantera, sistema de distribución electrónica de frenado (EBD), cinturones traseros retráctiles y cabeceras de altura ajustables.",
+"cost": 14500,
+"currency": "USD",
+"soldCount": 52,
+"category": "Autos",
+"images": [
+    "img/prod2.jpg"
+   
+],
+"relatedProducts": [1, 3]
+}  

@@ -74,11 +74,15 @@ function recuperarDatos() {
     function (e) {
       let userLogged = localStorage.getItem(`User-Logged`);
       let infoUser = document.getElementById("info-user")
-      let user = document.getElementById("usuario");
+      let user = document.getElementById("dato");
 
       if (userLogged){
         userLogged = JSON.parse(userLogged);
-        Usuario.innerText = Usuario.innerText + "Usuario:" + userLogged.usuario;
+        Usuario.innerText = Usuario.innerText + "usuario:" + userLogged.usuario;
+        user.innerText = user.innerText + 'Usuario logueado: ' + userLogged.email;
+         infoUser.style = "display: inline-block";
+  }
+
        
       }
-    });
+    );

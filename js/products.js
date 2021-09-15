@@ -1,7 +1,7 @@
-
+var currentSortCriteria = undefined;
 var categoriesArray = [];
-var minCount;
-var maxCount;
+var minCosto;
+var maxCosto;
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
@@ -14,8 +14,8 @@ function showAutos(array){
     for(let i = 0; i < array.length; i++){
         let auto = array[i];
        
-        if (((minCount == undefined) || (minCount != undefined && parseInt(auto.soldCount) >= minCount)) &&
-        ((maxCount == undefined) || (maxCount != undefined && parseInt(auto.soldCount) <= maxCount))){
+        if (((  minCosto == undefined) || (minCosto != undefined && parseInt(auto.cost) >= minCosto)) &&
+        ((maxCosto == undefined) || (maxCosto != undefined && parseInt(auto.cost) <= maxCosto))){
 
         contenido += `
         <div class="list-group-item list-group-item-action">
@@ -41,6 +41,7 @@ function showAutos(array){
     }
 }}
 
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -54,29 +55,6 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
     });
 });
-
-document.getElementById("filtrar").addEventListener("click", function(){
-  
-    minCount = document.getElementById("rango-min").value;
-    maxCount = document.getElementById("rango-max").value;
-
-    if ((minCount != undefined) && (minCount != "") && (parseInt(minCount)) >= 0){
-        minCount = parseInt(minCount);
-    }
-    else{
-        minCount = undefined;
-    }
-
-    if ((maxCount != undefined) && (maxCount != "") && (parseInt(maxCount)) >= 0){
-        maxCount = parseInt(maxCount);
-    }
-    else{
-        maxCount = undefined;
-    }
-
-    showAutos(array);
-});
-
 document.getElementById("limpiar").addEventListener("click", function ()
 {
   document.getElementById("rango-min").value = "";
@@ -85,3 +63,4 @@ document.getElementById("limpiar").addEventListener("click", function ()
   var maxCount = undefined;
   showAutos(autos)
 });
+
