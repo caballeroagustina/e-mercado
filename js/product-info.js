@@ -3,7 +3,7 @@
 //elementos HTML presentes.
 var autos = [];
 var comentarios = [];
-
+var estrellas=[];
 
 
 function showAuto (car){
@@ -39,9 +39,9 @@ info +=`
 document.getElementById("comentarios").innerHTML=comments;
 document.getElementById("contenido").innerHTML= info;
 document.getElementById("imagenes").innerHTML= imgs;
+document.getElementsByClassName("rating__star")
 
 }
-   
 
     document.addEventListener("DOMContentLoaded", function(e) { 
          
@@ -60,3 +60,4 @@ document.getElementById("imagenes").innerHTML= imgs;
               }); 
                
  });
+ 

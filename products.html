@@ -49,12 +49,13 @@
           <input type="number" placeholder="min." id="rango-min"> <br><br>
   
           <input type="number" placeholder="máx." id="rango-max" > <br><br>
-  
+         
           <button id="filtrar">Filtrar</button>
           <button id="limpiar">Limpiar</button><br><br>
   
           <hr>
   
+          
           <strong>Puedes buscar tu modelo favorito aquí:</strong> 
   
           <input type="text" id="buscador"> 
@@ -81,4 +82,30 @@
   </body>
 </html>
 
+<script>
 
+document.getElementById("filtrar").addEventListener("click", function () {
+
+
+minPag = document.getElementById("rango-min").value;
+maxPag = document.getElementById("rango-max").value;
+
+if ((minCosto != undefined) && (minCosto != "") && (parseInt(minCosto)) >= 0) {
+    minCosto = parseInt(minCosto);
+}
+else {
+    minCosto = undefined;
+}
+
+if ((maxCosto != undefined) && (maxCosto != "") && (parseInt(maxCosto)) >= 0) {
+    maxCosto = parseInt(maxCosto);
+}
+else {
+    maxCosto = undefined;
+}
+
+
+showAutos(categoriesArray);
+});
+
+</script>
