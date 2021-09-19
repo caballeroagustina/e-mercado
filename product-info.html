@@ -18,6 +18,7 @@
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" id="usuario" style="color: aliceblue;"  ></a>
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
@@ -33,12 +34,46 @@
      <div>
       <div id= "contenido"></div>
       <hr>
-      <div id = "imagenes" class="img"></div> 
+      <div id = "imagenes" ></div> 
       <hr>
-      <a href="products.html"> Lista de autos </a>
+     <div id="comentarios"></div>
+      
+      <form> <textarea name="Comment" id="nuevocomentario" placeholder="Haz una reseña aquí" cols="70" rows="5"></textarea> </form>
+      <button>Enviar</button>
+      <hr>
+      
      </div>
-     
-    
+    <p>Calificación:</p>
+     <div
+     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+     class="star-rating">
+      <input id="star-5" type="radio" name="rating" value="5"  />
+      <label for="star-5" title="5 stars">
+        <i class="active fa fa-star"></i>
+      </label>
+
+      <input id="star-4" type="radio" name="rating" value="4"/>
+      <label for="star-4" title="4 stars">
+        <i class="active fa fa-star"></i>
+      </label>
+
+      <input id="star-3" type="radio" name="rating" value="3"/>
+      <label for="star-3" title="3 stars">
+        <i class="active fa fa-star"></i>
+      </label>
+
+      <input id="star-2" type="radio" name="rating" value="2" />
+      <label for="star-2" title="2 stars">
+        <i class="active fa fa-star"></i>
+      </label>
+
+      <input id="star-1" type="radio" name="rating" value="1" checked/>
+      <label for="star-1" title="1 star">
+        <i class="active fa fa-star"></i>
+      </label>
+
+    </div> <hr><br>
+    <a href="products.html"> Lista de autos </a>
       <hr>
       <p class="mb-0"></p>
     </div>
@@ -64,7 +99,32 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/product-info.js"></script>
+  <script src="js/product-info.js"></script>  
 </body>
 
 </html>
+<style>
+  .star-rating {
+      direction: rtl;
+      display: inline-block;
+      padding: 20px
+  }
+  
+  .star-rating input[type=radio] {
+      display: none
+  }
+  
+  .star-rating label {
+      color: rgb(133, 142, 192);
+      font-size: 50px;
+      padding: 0;
+      cursor: pointer;
+  }
+  
+  .star-rating label:hover,
+  .star-rating label:hover ~ label,
+  .star-rating input[type=radio]:checked ~ label {
+      color: #ffbf00
+  }
+  
+        </style>

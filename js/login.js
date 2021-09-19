@@ -17,15 +17,12 @@ document.addEventListener("DOMContentLoaded", function(){
     
         }
         if(camposCompletos){
-           
-            window.location = "inicio.html" ;
+           window.location = "inicio.html"
         } else
        alert ( "Usuario y/o contraseña incorrectos" )
     }
     )
-  
-    
-    
+
     
 });
 
