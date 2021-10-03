@@ -1,1 +1,0 @@
-( (auto.name.toLowerCase().includes(buscar) || auto.description.toLowerCase().includes(buscar)) || (buscar==undefined && buscar!=""));
