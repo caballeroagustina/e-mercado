@@ -40,28 +40,37 @@ function showAutos(categoriesArray) {
 
                 if (buscar == undefined || auto.name.toLowerCase().indexOf(buscar) != -1){
                     if ((minCosto == undefined || (parseInt(auto.cost)  > minCosto)) &&
-                    (maxCosto == undefined ||   (parseInt(auto.cost) < maxCosto))) {
-           
+                    (maxCosto == undefined ||   (parseInt(auto.cost) < maxCosto))) {  
                     contenido += `
-                    <div class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-3">
+                   
+                   
+                      <div class="col-md-6">
+                     
+                   
+                
+                    <div id="fullContent" class="list-group-item list-group-item-action">
+
+                    <div class="row">
+                 
+                            
                                 <img src="` + auto.imgSrc + `" alt="` + auto.description + `" class="img-thumbnail">
-                            </div>
-                           
-                            <div class="col">
-                                <div class="d-flex w-100 justify-content-between">
+                                </div>
+                                <div class="col-md-6">
+            
                                     <h4 class="mb-1">`+ auto.name +`</h4>
                                     <p class="mb-1">` + auto.description + `</p>
                                     <small class="text-muted">` + auto.cost + ` `+ auto.currency +`</small>
                                     <p class="mb-1">` + auto.soldCount + `</p>
+                            
                                 </div>
-            
-                            </div>
-                        </div>
+                                
+                       
                     </div>
-                    `
-                 contenido += `<button style="float: right;" onclick="verMas(name)"> Ver más</button> <br><br>`
+                </div>  `
+                contenido += `  <button  type="button" class="btn btn-primary" style=""float: inline-end;";" onclick="verMas(name)"> Ver más</button> <br><br></br> `
+               
+                   
+                
 
                 }
         }

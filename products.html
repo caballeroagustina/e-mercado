@@ -23,7 +23,7 @@
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <div class="dropdown">
           <div class=""></div>
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button  type="button" class="btn btn-primary  dropdown-toggle" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div ></div>
             <div id= usuario  class="py-2 d-none d-md-inline-block"   > </div>
           </button>
@@ -38,29 +38,32 @@
         </div>
       </div>
     </nav>
- 
+  </div>
+  <div class="container">
     <div class="container p-5">
-      <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-
-       
-        <div>
+      
+    <div  class="row"  role="alert" style="position: relative; width:auto; top: 0;"  id="cat-list-container">
+    </div>
+  </div>
+ 
+   
           <strong>Puedes buscar tu modelo favorito aquí:</strong> 
   
           <input type="text" id="buscador"> 
   
-          <button id="limpBusc">Limpiar busqueda</button> <hr><br>
+          <button  type="button" class="btn btn-primary" id="limpBusc">Limpiar busqueda</button> <hr><br>
 
         
           <h2>Listado de vehículos</h2>
-          <div  id ="listado"></div>
+          <div id ="listado"></div>
   <hr>
   <p>Ordenar por:</p> 
   
-  <button id="sortCostDesc">Costo Desc</button>
+  <button  type="button" class="btn btn-primary" id="sortCostDesc">Costo Desc</button>
 
-  <button id="sortCostAsc">Costo Asc</button>
+  <button  type="button" class="btn btn-primary" id="sortCostAsc">Costo Asc</button>
 
-  <button id="sortIdDesc">Id Desc</button><br><br>
+  <button  type="button" class="btn btn-primary" id="sortIdDesc">Id Desc</button><br><br>
 
  
 
@@ -70,11 +73,13 @@
 
   <input type="number" placeholder="máx." id="rango-max" > <br><br>
  
-  <button id="filtrar">Filtrar</button>
-  <button id="limpiar">Limpiar</button><br><br>
+  <button  type="button" class="btn btn-primary" id="filtrar">Filtrar</button>
+  <button  type="button" class="btn btn-primary" id="limpiar">Limpiar</button><br><br>
 
-  
-      </div>
+</div>
+      
+         
+          <div>
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">
@@ -89,7 +94,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
+
+  
   </body>
 </html>
-
 
