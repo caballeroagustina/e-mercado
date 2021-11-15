@@ -4,8 +4,7 @@ const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/12
 const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json";
 const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
-const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
-const CART_DESAFIO_URL = "https://japdevdep.github.io/ecommerce-api/cart/654.json "
+
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
 var showSpinner = function(){
@@ -41,40 +40,42 @@ var getJSONData = function(url){
     });
 }
 
-
-//Función que se ejecuta una vez que se haya lanzado el evento de,
+//Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-  
-  document.addEventListener("DOMContentLoaded",
-    
-    function recuperarDatos() {
-    
-      let mis_datos_json = localStorage.getItem("mis_datos");
+document.addEventListener("DOMContentLoaded", function(e){
+});
+document.addEventListener("DOMContentLoaded",
+function recuperarDatos() {
 
-      let mis_datos = JSON.parse(mis_datos_json);
-    document.getElementById("usuario").innerHTML = 
-     mis_datos.usuario + "<br>";
-    
-     
-      
-  
-    });
+  let mis_datos_json = localStorage.getItem("mis_datos");
 
-    function guardarDatos() {
+  let mis_datos = JSON.parse(mis_datos_json);
+document.getElementById("usuario").innerHTML = 
+ mis_datos.usuario + "<br>";
 
-      let mis_datos = {
-        usuario: document.getElementById("inputEmail").value
-      };
+ 
   
 
-    let mis_datos_json = JSON.stringify(mis_datos);
+});
 
-    localStorage.setItem("mis_datos", mis_datos_json);
-     }
-     
-     document.addEventListener("DOMContentLoaded", function (e) {
- });
+function guardarDatos() {
+
+  let mis_datos = {
+    usuario: document.getElementById("inputEmail").value
+  };
+
+
+let mis_datos_json = JSON.stringify(mis_datos);
+
+localStorage.setItem("mis_datos", mis_datos_json);
+ }
+ 
+ document.addEventListener("DOMContentLoaded", function (e) {
+});
+
+
+
    
 
    

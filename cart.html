@@ -43,7 +43,7 @@
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
     
       <div class="dropdown"> 
-        <div class=""></div>
+        <div class="">
         <button  type="button" class="btn btn-primary  dropdown-toggle" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div ></div>
           <div id= usuario  class="py-2 d-none d-md-inline-block"   > </div>
@@ -60,50 +60,153 @@
       </div>
     </div>
   </nav>
+  
   <div class="container p-5">
     <div class="alert" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">
-      </h4>
+      </h4></div>
+      <h1 style="text-align: center;" >Carrito de compras</h1>
+      <h3 style="text-align: left;">Artículos a comprar</h3>
+      
       <p></p>
-  <div id="listadoCart"></div>
-  <h5 style="color:black" > Importe total: <div id="subtotal" ></div> <p style="color:black;">UYU</h5>
-  <div class="form-group">
-    <strong for="exampleFormControlSelect1" >Elija su destino: </strong>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option selected >MONTEVIDEO</option>
-      <option value = "2">CANELONES</option>
-      <option value = "3">SAN JOSE</option>
-      <option value = "4" >MALDONADO</option>
-      <option value = "5">RIVERA</option>
-      <option value = "6">TREINTA Y TRES</option>
-      <option value = "7">CERRO LARGO</option>
-      <option value = "8">SORIANO</option>
-      <option value = "9">FLORIDA</option>
-      <option value = "10">FLORES</option>
-      <option value = "11">DURAZNO</option>
-      <option value = "12">ROCHA</option>
-      <option value = "13">TACUAREMBO</option>
-      <option value = "14">PAYSANDU</option>
-      <option value = "15">RIO NEGRO</option>
-      <option value = "16">COLONIA</option>
-      <option value = "17">LAVALLEJA</option>
-      <option value = "18">SALTO</option>
-      <option value = "19">ARTIGAS</option>
-    </select>
+      <div id="listadoCart"></div>
+  <br>
+  <form id="myForm">
+  <h3 style="text-align: left;">Tipo de envío</h3>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="envio"  value="option1" required >
+    <label class="form-check-label" for="inlineRadio1">Premium (2-5 días) (15%)  </label>
   </div>
-  <div id="subtotal" >Subtotal=</div>
- <div ></div>  
-  <button type="submit" class="btn btn-outline-info" >Comprar</button>
- 
+  <br>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="envio"  value="option2" required>
+    <label class="form-check-label" for="inlineRadio2">Express (5-8 días) (7%)  </label>
+  </div>
+  <br>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="envio" value="option3" required >
+    <label class="form-check-label" for="inlineRadio3"> Standard (12 a 15 días) (5%)  </label>
+  </div>
+ <br> <br>
+ <h3 style="text-align: left;">Dirección de envío</h3>
+
   <div class="form-group">
+    <label for="inputAddress">País</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Uruguay" required>
+  </div>
   <div class="form-group">
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <label for="inputAddress2">Ciudad</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Montevideo"required>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Calle</label>
+      <input type="text" class="form-control" id="inputCity" required >
     </div>
+    <div class="form-group col-md-2">
+      <label for="inputState">Número</label>
+      <input id="inputState" class="form-control" required>
+    </div>
+   
+      <div class="form-group col-md-4">
+      <label for="inputZip">Esquina</label>
+      <input type="text" class="form-control" id="inputZip" required>
+      </div>
+  </div>
+  <br><br> 
+  <h3>Costos</h3>
+  <ul class="list-group">
+    <li class="list-group-item" >Subtotal <br> <small>(Precio de producto por cantidad)</small> <strong style="text-align: right;" class="subtotal" id="subtotal"></strong></small></li>
+    
+    <li class="list-group-item">Costo de envio <br><small>(Según el tipo de envío) <strong style="text-align: right;" class="envio" id="totalconEnvio" > </strong></small></li>
+    <li class="list-group-item" >Total  <strong style="text-align: right;" id="total" class="envio" ></strong></li>
+   
+  </ul>
+  <br><br>
+<button type="submit" style="align-items: flex-end;" class="btn btn-primary">Comprar</button>
+<br><br>
+  <h3>Forma de pago</h3> 
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Seleccionar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"> 
+        <h5 class="modal-title" id="exampleModalLabel">Elija su forma de pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="was-validated">
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="op2" value="option2" >
+          <label class="form-check-label" for="inlineRadio3"> Transferencia bancaria </label> <br><br>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-5 ">
+          <label for="inputZip">Nº de cuenta</label> 
+          <input type="text" class="form-control formuIn" id="inputZip">
+        </div>
+      </div>
+      
+      <div class="form-check">
+       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="op1" value="option1" >
+      
+                <label class="form-check-label" for="inlineRadio1">Tarjeta de crédito </label> <br> <br>
+              </div>
+                <div class="form-row">
+                  <div class="form-group col-5">
+                    <label for="inputCity">Número de tarjeta</label>
+                    <input type="text" class="form-control formuIn" id="inputCity"> 
+                  </div>
+                  <br>
+                  
+                    <div class="form-check form-check-inline">
+                      <div class="form-group">
+                    <label for="inputState">Cód. de Seguridad</label>
+                    <input id="inputState" class="form-control formuIn"> <br>
+                      </div>
+                    <div class="form-group was  ">
+                      <label for="inputState">Vencimiento(MM/AA)</label>
+                      <input id="inputState" class="form-control formuIn">
+                    </div>
+                      </div>
+
+                        <br>
+                      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" >Aceptar</button>
+  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</form>
+
+
+
+
+ 
+               
+                 
+                 
+         
+ 
+ 
+      <div></div>
+      <div></div> 
+      <div></div>
+      <div></div>
+    
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
@@ -113,5 +216,4 @@
 </body>
 
 </html>
-    
-            
+ 

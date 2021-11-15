@@ -40,17 +40,18 @@ function showAutos(categoriesArray) {
 
                 if (buscar == undefined || auto.name.toLowerCase().indexOf(buscar) != -1){
                     if ((minCosto == undefined || (parseInt(auto.cost)  > minCosto)) &&
-                    (maxCosto == undefined ||   (parseInt(auto.cost) < maxCosto))) {  
+                    (maxCosto == undefined ||   (parseInt(auto.cost) < maxCosto))) { 
+                         
                     contenido += `
                    
-                   
+                    <div class="row">
                       <div class="col-md-6">
                      
                    
                 
                     <div id="fullContent" class="list-group-item list-group-item-action">
 
-                    <div class="row">
+                   
                  
                             
                                 <img src="` + auto.imgSrc + `" alt="` + auto.description + `" class="img-thumbnail">
